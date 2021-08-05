@@ -1,5 +1,7 @@
 import os
 
+
+
 while (True):
   print ("1 - Vendas do Dia e Relatório")
   print ("2 - Estoque de ingredientes")
@@ -46,11 +48,11 @@ while (True):
     milho_usado = input ("Quantos kilos de milho foram usado hoje? " "\n")
     fermento_usado = input ("Quantos kilos de fermento foram usado hoje? " "\n")
     ovos_usados = input ("Quantos ovos foram usado hoje? " "\n")
-    massa_restante = int (massa) - int (massa_usada)
-    farinha_restante = int (farinha) - int (farinha_usada)
-    leite_restante = int (leite) - int (leite_usado)
-    milho_restante = int (milho) - int (milho_usado)
-    fermento_restante = int (fermento) - int (fermento_usado)
+    massa_restante = float (massa) - float (massa_usada)
+    farinha_restante = float (farinha) - float (farinha_usada)
+    leite_restante = float (leite) - float (leite_usado)
+    milho_restante = float (milho) - float (milho_usado)
+    fermento_restante = float (fermento) - float (fermento_usado)
     ovos_restante = int (ovos) - int (ovos_usados)
     print ("Ainda sobraram " + str (massa_restante) + " kilos de massa, " + str (farinha_restante) + " kilos de farinha, " + str (leite_restante) + " litros de leite, " + str (milho_restante) + " kilos de milho, " + str (fermento_restante) + " kilos de de fermento, e " + str (ovos_restante) + " ovos restantes" "\n")
     if (massa_restante < 55):
@@ -77,5 +79,23 @@ while (True):
     print("Opção não válida, tente novamente ")
 print ("Programa Finalizado")
 
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+host = '<HOST_URL>'
+port = 587
+user = 'admin'
+password = 'admin'
+server.ehlo('Oi')
+server.starttls()
+server.login(user, password)
+message = "Total de pães vendidos: %.0f deu R$ %.2f" "\n" % (total, total_vendas)
+email_msg = MIMEMultipart()
+email_msg['From'] = user
+email_msg['To'] = '<EMAIL_DE_DESTINO>'
+email_msg['Subject'] = 'Relatório do Dia'
+email_msg.attach(MIMEText(message, 'plain'))
+server.sendmail(msg['From'], msg['To'], msg.as_string())
+server.quit()
 
  
