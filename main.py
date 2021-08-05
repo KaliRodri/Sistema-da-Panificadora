@@ -4,14 +4,7 @@ PAO_SAL = 0.15
 PAO_LEITE = 0.10
 PAO_MILHO = 0.20
 
-while (True):
-  print ("1 - Vendas do Dia e Relatório")
-  print ("2 - Estoque de ingredientes")
-  print ("3 - Sobre")
-  print ("4 - Sair")
-  opcao = input ("Digite a Opção Desejada: ")
-  print(opcao)
-
+def VendaRelatorio():
   if (opcao == "1"):
       os.system('clear')
       print("Vendas do Dia e Relatório")
@@ -34,10 +27,23 @@ while (True):
         print ("Infelizmente não batemos a meta, vamos nos esforçar mais" "\n")
       elif (int(total_vendas > meta_diaria)):
         print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
+
+
+
+while (True):
+  print ("1 - Vendas do Dia e Relatório")
+  print ("2 - Estoque de ingredientes")
+  print ("3 - Sobre")
+  print ("4 - Sair")
+  opcao = input ("Digite a Opção Desejada: ")
+  print(opcao)
+
+  if (opcao == "1"):
+      VendaRelatorio()
        
   elif (opcao == "2"):
     os.system('clear')
-    print("Estoque de ingredientes")
+    print("Estoque de Ingredientes")
     massa = 110
     farinha = 90
     leite = 100
