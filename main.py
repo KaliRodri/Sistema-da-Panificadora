@@ -11,6 +11,7 @@ while (True):
   if (opcao == "1"):
      os.system('clear')
      print("Nova venda")
+     meta_diaria = 150
      sal_qt = int(input ("Digite a quantidade de pães de Sal: "))
      leite_qt = int(input ("Digite a quantidade de pães de Leite: "))
      milho_qt = int(input ("Digite a quantidade de pães de Milho: "))
@@ -23,6 +24,13 @@ while (True):
        print ("O pão mais vendido hoje foi o de Leite " "\n")
      elif ((milho_qt > sal_qt) and (milho_qt > leite_qt)):
        print ("O pão mais vendido hoje foi o de Milho " "\n")
+     if (int(total_vendas == meta_diaria)):
+       print ("Parabéns, vocês bateram a meta do dia!" "\n")
+     elif (int(total_vendas < meta_diaria)):
+       print ("Infelizmente não batemos a meta, vamos nos esforçar mais" "\n")
+     elif (int(total_vendas > meta_diaria)):
+       print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
+       
   elif (opcao == "2"):
     os.system('clear')
     massa = 150
@@ -56,9 +64,6 @@ while (True):
       print ("É recomendável comprar mais sacas de fermento" "\n")
     if (ovos_restante < 20):
       print ("É recomendável comprar mais sacas de ovos" "\n") 
-
-     
-    
    
   elif (opcao == "3"):
     print ("Sobre")
