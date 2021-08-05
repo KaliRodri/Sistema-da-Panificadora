@@ -72,7 +72,7 @@ while (True):
    
   elif (opcao == "3"):
     print ("Sobre")
-    print ("Feito por Ian Rodrigo, em Python usando a plataforma Replit, Ago/2021" "\n")
+    print ("Feito por Ian Rodrigo, em Python usando a plataforma Replit, Ago/2021, entre em contato comigo pelo email ianrodrigo25@gmail.com e no meu gitHub KaliRodri" "\n")
     
   elif (opcao == "4"):
     print ("Sair")
