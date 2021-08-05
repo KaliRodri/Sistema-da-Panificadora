@@ -30,7 +30,7 @@ while (True):
     leite = 170
     milho = 90
     fermento = 80
-    ovos = 40
+    ovos = 90
     massa_usada = input ("Quantos kilos de massa foram usado hoje? " "\n")
     farinha_usada = input ("Quantos kilos de farinha foram usado hoje? " "\n")
     leite_usado = input ("Quantos litros de leite foram usado hoje? " "\n")
@@ -44,7 +44,20 @@ while (True):
     fermento_restante = int (fermento) - int (fermento_usado)
     ovos_restante = int (ovos) - int (ovos_usados)
     print ("Ainda sobraram " + str (massa_restante) + " kilos de massa, " + str (farinha_restante) + " kilos de farinha, " + str (leite_restante) + " litros de leite, " + str (milho_restante) + " kilos de milho, " + str (fermento_restante) + " kilos de de fermento, e " + str (ovos_restante) + " ovos restantes" "\n")
-    
+    if (massa_restante < 30):
+      print ("É recomendável comprar mais sacas de massa" "\n")
+    if (farinha_restante < 50):
+      print ("É recomendável comprar mais sacas de farinha" "\n")
+    if (leite_restante < 60):
+      print ("É recomendável comprar mais sacas de leite" "\n")
+    if (milho_restante < 15):
+      print ("É recomendável comprar mais sacas de milho" "\n")
+    if (fermento_restante < 10):
+      print ("É recomendável comprar mais sacas de fermento" "\n")
+    if (ovos_restante < 20):
+      print ("É recomendável comprar mais sacas de ovos" "\n") 
+
+     
     
    
   elif (opcao == "3"):
