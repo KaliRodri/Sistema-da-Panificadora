@@ -18,10 +18,10 @@ while (True):
       meta_diaria = 150
       sal_qt = int(input ("Digite a quantidade de saída pães de Sal: "))
       leite_qt = int(input ("Digite a quantidade de saída pães de Leite: "))
-      milho_qt = int(input ("Digite a quantidade de saída pães de Milho: "))
+      milho_qt = int(input ("Digite a quantidade de saída pães de Milho: " ))
       total_vendas = sal_qt*PAO_SAL + leite_qt*PAO_LEITE + milho_qt*PAO_MILHO
       total = sal_qt  + leite_qt + milho_qt
-      print ("Total de pães vendidos: %.0f deu R$ %.2f" "\n" % (total, total_vendas)) 
+      print ("\n" "Foram vendidos " + str(sal_qt) + " pães de sal, " + str(leite_qt) + " pães de leite e " + str(sal_qt) + " pães de milho, totalizando %.0f de pães vendidos e R$ %.2f de caixa" "\n" % (total, total_vendas)) 
       if ((sal_qt > leite_qt) and (sal_qt > milho_qt)):
         print ("O pão mais vendido hoje foi o de Sal " "\n")
       elif ((leite_qt > sal_qt) and (leite_qt > milho_qt)):
