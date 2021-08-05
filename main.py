@@ -16,7 +16,7 @@ while (True):
      milho_qt = int(input ("Digite a quantidade de pães de Milho: "))
      total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*20
      total = sal_qt  + leite_qt + milho_qt
-     print ("Total de pães: %.0f deu R$ %.2f" % (total, total_vendas)) 
+     print ("Total de pães: %.0f deu R$ %.2f" "\n" % (total, total_vendas)) 
   elif (opcao == "2"):
     os.system('clear')
     print ("No dia de hoje, foi vendido ", str(total), " de pães")
@@ -25,6 +25,7 @@ while (True):
    
   elif (opcao == "3"):
     print ("Sobre")
+    print ("Feito por Ian Rodrigo, em Python usando a plataforma Replit, Ago/2021" "\n")
     
   elif (opcao == "4"):
     print ("Sair")
