@@ -17,8 +17,17 @@ while (True):
      total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*20
      total = sal_qt  + leite_qt + milho_qt
      print ("Total de pães: %.0f deu R$ %.2f" "\n" % (total, total_vendas)) 
+     if ((sal_qt > leite_qt) and (sal_qt > milho_qt)):
+       print ("O pão mais vendido hoje foi o de Sal " "\n")
+     elif ((leite_qt > sal_qt) and (leite_qt > milho_qt)):
+       print ("O pão mais vendido hoje foi o de Leite " "\n")
+     elif ((milho_qt > sal_qt) and (milho_qt > leite_qt)):
+       print ("O pão mais vendido hoje foi o de Milho " "\n")
+
+     
   elif (opcao == "2"):
     os.system('clear')
+    
     print ("No dia de hoje, foi vendido ", str(total), " de pães")
 
     print ("Relatório")
