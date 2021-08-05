@@ -1,8 +1,8 @@
 import os
 
 while (True):
-  print ("1 - Nova Venda")
-  print ("2 - Gerar relatório")
+  print ("1 - Vendas do Dia e Relatório")
+  print ("2 - Estoque de ingredientes")
   print ("3 - Sobre")
   print ("4 - Sair")
   opcao = input ("Digite a Opção Desejada: ")
@@ -23,14 +23,29 @@ while (True):
        print ("O pão mais vendido hoje foi o de Leite " "\n")
      elif ((milho_qt > sal_qt) and (milho_qt > leite_qt)):
        print ("O pão mais vendido hoje foi o de Milho " "\n")
-
-     
   elif (opcao == "2"):
     os.system('clear')
+    massa = 150
+    farinha = 120
+    leite = 170
+    milho = 90
+    fermento = 80
+    ovos = 40
+    massa_usada = input ("Quantos kilos de massa foram usado hoje? " "\n")
+    farinha_usada = input ("Quantos kilos de farinha foram usado hoje? " "\n")
+    leite_usado = input ("Quantos litros de leite foram usado hoje? " "\n")
+    milho_usado = input ("Quantos kilos de milho foram usado hoje? " "\n")
+    fermento_usado = input ("Quantos kilos de fermento foram usado hoje? " "\n")
+    ovos_usados = input ("Quantos ovos foram usado hoje? " "\n")
+    massa_restante = int (massa) - int (massa_usada)
+    farinha_restante = int (farinha) - int (farinha_usada)
+    leite_restante = int (leite) - int (leite_usado)
+    milho_restante = int (milho) - int (milho_usado)
+    fermento_restante = int (fermento) - int (fermento_usado)
+    ovos_restante = int (ovos) - int (ovos_usados)
+    print ("Ainda sobraram " + str (massa_restante) + " kilos de massa,")
     
-    print ("No dia de hoje, foi vendido ", str(total), " de pães")
-
-    print ("Relatório")
+    
    
   elif (opcao == "3"):
     print ("Sobre")
