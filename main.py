@@ -11,12 +11,16 @@ while (True):
   if (opcao == "1"):
      os.system('clear')
      print("Nova venda")
-     sal_qt = int(input ("Digite a quantidade de pães de Sal"))
-     leite_qt = int(input ("Digite a quantidade de pães de Leite"))
-     milho_qt = int(input ("Digite a quantidade de pães de Milho"))
-     total = sal_qt + leite_qt + milho_qt
-     print ("Total de pães: %.0f deu R$ %.2f" % (total, total*0.25)) 
+     sal_qt = int(input ("Digite a quantidade de pães de Sal: "))
+     leite_qt = int(input ("Digite a quantidade de pães de Leite: "))
+     milho_qt = int(input ("Digite a quantidade de pães de Milho: "))
+     total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*20
+     total = sal_qt  + leite_qt + milho_qt
+     print ("Total de pães: %.0f deu R$ %.2f" % (total, total_vendas)) 
   elif (opcao == "2"):
+    os.system('clear')
+    print ("No dia de hoje, foi vendido ", str(total), " de pães")
+
     print ("Relatório")
    
   elif (opcao == "3"):
