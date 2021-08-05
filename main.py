@@ -15,7 +15,7 @@ while (True):
      sal_qt = int(input ("Digite a quantidade de saída pães de Sal: "))
      leite_qt = int(input ("Digite a quantidade de saída pães de Leite: "))
      milho_qt = int(input ("Digite a quantidade de saída pães de Milho: "))
-     total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*20
+     total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*0.20
      total = sal_qt  + leite_qt + milho_qt
      print ("Total de pães vendidos: %.0f deu R$ %.2f" "\n" % (total, total_vendas)) 
      if ((sal_qt > leite_qt) and (sal_qt > milho_qt)):
@@ -63,7 +63,7 @@ while (True):
       print ("É recomendável comprar mais sacas de milho" "\n")
     if (fermento_restante < 25):
       print ("É recomendável comprar mais sacas de fermento" "\n")
-    if (ovos_restante < 20):
+    if (ovos_restante < 25):
       print ("É recomendável comprar mais sacas de ovos" "\n") 
    
   elif (opcao == "3"):
