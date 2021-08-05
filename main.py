@@ -43,7 +43,7 @@ while (True):
     milho_restante = int (milho) - int (milho_usado)
     fermento_restante = int (fermento) - int (fermento_usado)
     ovos_restante = int (ovos) - int (ovos_usados)
-    print ("Ainda sobraram " + str (massa_restante) + " kilos de massa,")
+    print ("Ainda sobraram " + str (massa_restante) + " kilos de massa, " + str (farinha_restante) + " kilos de farinha, " + str (leite_restante) + " litros de leite, " + str (milho_restante) + " kilos de milho, " + str (fermento_restante) + " kilos de de fermento, e " + str (ovos_restante) + " ovos restantes" "\n")
     
     
    
