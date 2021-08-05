@@ -1,7 +1,6 @@
 import os
 
 
-
 while (True):
   print ("1 - Vendas do Dia e Relatório")
   print ("2 - Estoque de ingredientes")
@@ -11,27 +10,27 @@ while (True):
   print(opcao)
 
   if (opcao == "1"):
-     os.system('clear')
-     print("Vendas do Dia e Relatório")
-     meta_diaria = 150
-     sal_qt = int(input ("Digite a quantidade de saída pães de Sal: "))
-     leite_qt = int(input ("Digite a quantidade de saída pães de Leite: "))
-     milho_qt = int(input ("Digite a quantidade de saída pães de Milho: "))
-     total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*0.20
-     total = sal_qt  + leite_qt + milho_qt
-     print ("Total de pães vendidos: %.0f deu R$ %.2f" "\n" % (total, total_vendas)) 
-     if ((sal_qt > leite_qt) and (sal_qt > milho_qt)):
-       print ("O pão mais vendido hoje foi o de Sal " "\n")
-     elif ((leite_qt > sal_qt) and (leite_qt > milho_qt)):
-       print ("O pão mais vendido hoje foi o de Leite " "\n")
-     elif ((milho_qt > sal_qt) and (milho_qt > leite_qt)):
-       print ("O pão mais vendido hoje foi o de Milho " "\n")
-     if (int(total_vendas == meta_diaria)):
-       print ("Parabéns, vocês bateram a meta do dia!" "\n")
-     elif (int(total_vendas < meta_diaria)):
-       print ("Infelizmente não batemos a meta, vamos nos esforçar mais" "\n")
-     elif (int(total_vendas > meta_diaria)):
-       print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
+      os.system('clear')
+      print("Vendas do Dia e Relatório")
+      meta_diaria = 150
+      sal_qt = int(input ("Digite a quantidade de saída pães de Sal: "))
+      leite_qt = int(input ("Digite a quantidade de saída pães de Leite: "))
+      milho_qt = int(input ("Digite a quantidade de saída pães de Milho: "))
+      total_vendas = sal_qt*0.15 + leite_qt*0.10 + milho_qt*0.20
+      total = sal_qt  + leite_qt + milho_qt
+      print ("Total de pães vendidos: %.0f deu R$ %.2f" "\n" % (total, total_vendas)) 
+      if ((sal_qt > leite_qt) and (sal_qt > milho_qt)):
+        print ("O pão mais vendido hoje foi o de Sal " "\n")
+      elif ((leite_qt > sal_qt) and (leite_qt > milho_qt)):
+        print ("O pão mais vendido hoje foi o de Leite " "\n")
+      elif ((milho_qt > sal_qt) and (milho_qt > leite_qt)):
+        print ("O pão mais vendido hoje foi o de Milho " "\n")
+      if (int(total_vendas == meta_diaria)):
+        print ("Parabéns, vocês bateram a meta do dia!" "\n")
+      elif (int(total_vendas < meta_diaria)):
+        print ("Infelizmente não batemos a meta, vamos nos esforçar mais" "\n")
+      elif (int(total_vendas > meta_diaria)):
+        print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
        
   elif (opcao == "2"):
     os.system('clear')
@@ -79,23 +78,7 @@ while (True):
     print("Opção não válida, tente novamente ")
 print ("Programa Finalizado")
 
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-host = '<HOST_URL>'
-port = 587
-user = 'admin'
-password = 'admin'
-server.ehlo('Oi')
-server.starttls()
-server.login(user, password)
-message = "Total de pães vendidos: %.0f deu R$ %.2f" "\n" % (total, total_vendas)
-email_msg = MIMEMultipart()
-email_msg['From'] = user
-email_msg['To'] = '<EMAIL_DE_DESTINO>'
-email_msg['Subject'] = 'Relatório do Dia'
-email_msg.attach(MIMEText(message, 'plain'))
-server.sendmail(msg['From'], msg['To'], msg.as_string())
-server.quit()
+
+
 
  
