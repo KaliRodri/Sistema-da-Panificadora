@@ -4,6 +4,12 @@ PAO_SAL = 0.15
 PAO_LEITE = 0.10
 PAO_MILHO = 0.20
 
+quantidade_vendas = 0
+
+sal_qt = 0
+leite_qt = 0
+milho_qt = 0
+
 def VendaRelatorio():
   if (opcao == "1"):
       os.system('clear')
@@ -27,21 +33,12 @@ def VendaRelatorio():
         print ("Infelizmente não batemos a meta, vamos nos esforçar mais" "\n")
       elif (int(total_vendas > meta_diaria)):
         print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
-
-
-
-while (True):
-  print ("1 - Vendas do Dia e Relatório")
-  print ("2 - Estoque de ingredientes")
-  print ("3 - Sobre")
-  print ("4 - Sair")
-  opcao = input ("Digite a Opção Desejada: ")
-  print(opcao)
-
-  if (opcao == "1"):
-      VendaRelatorio()
-       
-  elif (opcao == "2"):
+        print ("Quantidade de Vendas:" "\n")
+        global quantidade_vendas 
+        quantidade_vendas = quantidade_vendas + 1
+      
+def Mercadorias():
+ if (opcao == "2"):
     os.system('clear')
     print("Estoque de Ingredientes")
     massa = 110
@@ -75,12 +72,54 @@ while (True):
       print ("É recomendável comprar mais sacas de fermento" "\n")
     if (ovos_restante < 25):
       print ("É recomendável comprar mais sacas de ovos" "\n") 
-   
+
+
+def relatorio():
+  os.system('clear') 
+  print(" *** Relatório do Dia *** ")
+  print("\n")
+  print("Quantidade de vendas do dia: ", quantidade_vendas)
+  print("\nQuantidade por tipo de pão:")
+  print("\t+ Sal: X unidades = R$ X reais")
+  print("\t+ Leite: X unidades = R$ X reais")
+  print("\t+ Milho: X unidades = R$ X reais")
+
+  print("\nMais vendidos: ")
+
+  print("\nValor total do dia: R$ reais")
+
+  input("\n\nPressione ENTER para continuar: ")
+  os.system('clear')
+
+
+def Sobre():
+  print ("Sobre")
+  print ("Feito por Ian Rodrigo, em Python usando a plataforma Replit, Ago/2021, entre em contato comigo pelo email ianrodrigo25@gmail.com e no meu gitHub KaliRodri" "\n")
+
+
+while (True):
+  print ("Quantidade de Vendas:" + str(quantidade_vendas) + "\n")
+  print ("1 - Vendas do Dia e Relatório")
+  print ("2 - Estoque de ingredientes")
+  print ("3 - Relatório")
+  print ("4 - Sobre")
+  print ("5 - Sair")
+  opcao = input ("Digite a Opção Desejada: ")
+  print(opcao)
+
+  if (opcao == "1"):
+    VendaRelatorio()
+       
+  elif (opcao == "2"):
+    Mercadorias() 
+  
   elif (opcao == "3"):
-    print ("Sobre")
-    print ("Feito por Ian Rodrigo, em Python usando a plataforma Replit, Ago/2021, entre em contato comigo pelo email ianrodrigo25@gmail.com e no meu gitHub KaliRodri" "\n")
-    
+    relatorio() 
+   
   elif (opcao == "4"):
+    Sobre()
+    
+  elif (opcao == "5"):
     print ("Sair")
     break
   else:
