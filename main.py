@@ -6,14 +6,14 @@ PAO_MILHO = 0.20
 
 quantidade_vendas = 0
 
-sal_qt = 0
-leite_qt = 0
-milho_qt = 0
+sal_qtd = 0
+leite_qtd = 0
+milho_qtd = 0
 
-def VendaRelatorio():
-  if (opcao == "1"):
+def Venda():
       os.system('clear')
-      print("Vendas do Dia e Relatório")
+      print(" *** Vendas *** ""\n")
+      print("Vendas do Dia""\n")
       meta_diaria = 150
       sal_qt = int(input ("Digite a quantidade de saída pães de Sal: "))
       leite_qt = int(input ("Digite a quantidade de saída pães de Leite: "))
@@ -34,13 +34,19 @@ def VendaRelatorio():
       elif (int(total_vendas > meta_diaria)):
         print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
         print ("Quantidade de Vendas:" "\n")
-        global quantidade_vendas 
+
+        global quantidade_vendas, sal_qtd, milho_qtd, leite_qtd
         quantidade_vendas = quantidade_vendas + 1
+        sal_qtd = sal_qtd + sal_qt
+        milho_qtd = milho_qtd + milho_qt
+        leite_qtd = leite_qtd + leite_qt
+        print(quantidade_vendas)
+      
       
 def Mercadorias():
- if (opcao == "2"):
     os.system('clear')
-    print("Estoque de Ingredientes")
+    print(" *** Mercadorias *** ""\n")
+    print("Estoque de Ingredientes""\n")
     massa = 110
     farinha = 90
     leite = 100
@@ -76,15 +82,16 @@ def Mercadorias():
 
 def relatorio():
   os.system('clear') 
-  print(" *** Relatório do Dia *** ")
+  print(" *** Relatório do Dia *** ""\n")
   print("\n")
   print("Quantidade de vendas do dia: ", quantidade_vendas)
   print("\nQuantidade por tipo de pão:")
-  print("\t+ Sal: X unidades = R$ X reais")
-  print("\t+ Leite: X unidades = R$ X reais")
-  print("\t+ Milho: X unidades = R$ X reais")
+  print("\t+ Sal: %.0f unidades = R$ %0.2f reais" %(sal_qtd, sal_qtd*PAO_SAL))
+  print("\t+ Milho: %.0f unidades = R$ %0.2f reais" %(milho_qtd, milho_qtd*PAO_MILHO))
+  print("\t+ Leite: %.0f unidades = R$ %0.2f reais" %(sal_qtd, leite_qtd*PAO_LEITE))
 
   print("\nMais vendidos: ")
+
 
   print("\nValor total do dia: R$ reais")
 
@@ -93,7 +100,7 @@ def relatorio():
 
 
 def Sobre():
-  print ("Sobre")
+  print ("Sobre""\n")
   print ("Feito por Ian Rodrigo, em Python usando a plataforma Replit, Ago/2021, entre em contato comigo pelo email ianrodrigo25@gmail.com e no meu gitHub KaliRodri" "\n")
 
 
@@ -108,7 +115,7 @@ while (True):
   print(opcao)
 
   if (opcao == "1"):
-    VendaRelatorio()
+    Venda()
        
   elif (opcao == "2"):
     Mercadorias() 
