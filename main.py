@@ -35,14 +35,16 @@ def Venda():
         print ("Parabéns, vocês superaram a meta do dia! Ótimo trabalho!" "\n")
         print ("Quantidade de Vendas:" "\n")
 
-        global quantidade_vendas, sal_qtd, milho_qtd, leite_qtd
-        quantidade_vendas = quantidade_vendas + 1
-        sal_qtd = sal_qtd + sal_qt
-        milho_qtd = milho_qtd + milho_qt
-        leite_qtd = leite_qtd + leite_qt
-        print(quantidade_vendas)
-      
-      
+      global quantidade_vendas, sal_qtd, milho_qtd, leite_qtd
+      quantidade_vendas = quantidade_vendas + 1
+      sal_qtd = sal_qtd + sal_qt
+      milho_qtd = milho_qtd + milho_qt
+      leite_qtd = leite_qtd + leite_qt
+      print(quantidade_vendas)
+
+      input("\n\nPressione ENTER para continuar: ")
+      os.system('clear')
+
 def Mercadorias():
     os.system('clear')
     print(" *** Mercadorias *** ""\n")
